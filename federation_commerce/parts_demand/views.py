@@ -25,7 +25,6 @@ class PartsDemandList(generics.ListCreateAPIView):
 
 
 class PartsDemandDetail(generics.RetrieveUpdateDestroyAPIView):
-    #queryset = PartsDemand.objects.all()
     serializer_class = PartsDemandSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
@@ -36,6 +35,7 @@ class PartsDemandDetail(generics.RetrieveUpdateDestroyAPIView):
         elif self.request.user.username == "Administrador":
             return PartsDemand.objects.all()
         return PartsDemand.objects.filter(owner=self.request.user)
+
 
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
