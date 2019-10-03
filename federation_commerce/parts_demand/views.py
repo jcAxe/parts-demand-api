@@ -1,7 +1,6 @@
 from django.contrib.auth.decorators import login_required
 
 from .models import PartsDemand
-from .permissions import IsOwnerOrReadOnly
 from .serializers import PartsDemandSerializer, UserSerializer
 from rest_framework import generics
 from django.contrib.auth.models import User
