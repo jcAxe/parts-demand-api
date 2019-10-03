@@ -66,12 +66,12 @@ WSGI_APPLICATION = 'federation_commerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': str(os.environ.get("DBENGINE")),
-        'NAME': str(os.environ.get('DBNAME')),
-        'HOST': str(os.environ.get("DBHOST")),
-        'PORT': str(os.environ.get("DBPORT")),
-        'USER': str(os.environ.get("DBUSER")),
-        'PASSWORD': str(os.environ.get("DBPASSWORD")),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'demands',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'USER': 'postgres',
+        'PASSWORD': 'a1a1a1a1',
     }
 }
 
