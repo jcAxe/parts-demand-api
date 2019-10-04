@@ -8,7 +8,7 @@ class PartsDemandSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PartsDemand
-        fields = ['id', 'description', 'delivery_addr', 'contact_info', 'owner', 'status']
+        fields = ['id', 'description', 'delivery_addr', 'contact_info', 'owner', 'conclusion_status']
 
 
 class UserSerializer(serializers.ModelSerializer):
