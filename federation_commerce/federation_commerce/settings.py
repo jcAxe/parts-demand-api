@@ -64,14 +64,20 @@ WSGI_APPLICATION = 'federation_commerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+DBENGINE = str(os.environ.get("DBENGINE"))
+DBNAME = str(os.environ.get('DBNAME'))
+DBHOST = str(os.environ.get("DBHOST"))
+DBPORT = str(os.environ.get("DBPORT"))
+DBUSER = str(os.environ.get("DBUSER"))
+DBPASSWORD = str(os.environ.get("DBPASSWORD"))
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'demands',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'USER': 'postgres',
-        'PASSWORD': 'a1a1a1a1',
+        'ENGINE': DBENGINE,
+        'NAME': DBNAME,
+        'HOST': DBHOST,
+        'PORT': DBPORT,
+        'USER': DBUSER,
+        'PASSWORD': DBPASSWORD,
     }
 }
 
