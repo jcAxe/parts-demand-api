@@ -1,12 +1,9 @@
+import django.contrib.admin.templatetags.admin_list
 from django.contrib import admin
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.utils.html import format_html
 
 from .models import PartsDemand
-import django.contrib.admin.templatetags.admin_list
-from django.utils.safestring import mark_safe
-from django.conf import settings
-import os
 
 
 @admin.register(PartsDemand)

@@ -1,11 +1,8 @@
-from django.contrib.auth.decorators import login_required
-
 from .models import PartsDemand
 from .serializers import PartsDemandSerializer, UserSerializer
 from rest_framework import generics
 from django.contrib.auth.models import User
 from rest_framework import permissions
-from rest_framework.response import Response
 
 
 class PartsDemandList(generics.ListCreateAPIView):
