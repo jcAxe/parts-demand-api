@@ -38,7 +38,8 @@ Na linha de comando, digite:
 sudo docker-compose exec web python federation_commerce/manage.py createsuperuser
 ```
 Será pedido um nome de usuário, email e senha. Você pode ignorar o e-mail ao apertar enter com o campo vazio.
-Coloque o username como: Administrador
+
+Coloque o username como: **Administrador**
 A senha pode ser qualquer uma, só lembre dela para acessar a plataforma.
 
 Agora, vamos criar o Anunciante:
@@ -46,12 +47,11 @@ Agora, vamos criar o Anunciante:
 sudo docker-compose exec web python federation_commerce/manage.py createsuperuser
 ```
 
-Sugerimos o username como: Anunciante
+Sugerimos o username como: **Anunciante**
 A senha pode ser qualquer uma, só lembre dela para acessar a plataforma.
 
-
-
 Certo, agora a api, a plataforma e o admin devem estar acessíveis.
+
 Embora as interações possam ser feitas pelo Postman, no browser é possivel:
 
 Ver todas as demandas criadas até o momento em:
@@ -64,14 +64,20 @@ Também, para concluir o estado de finalização, basta adicionar a palavra "clo
 >```localhost:8000/demands/"id"/close ```
 
 Demandas são criadas com seu estado de conclusão **Falso** como padrão, em caso deste valor não ser especificado.
+
 Após acessar este endpoint, o estado de conclusão da demanda será modificado para **Verdadeiro**.
 
 ## Acessando os endpoints pelo Postman
 
 Ao importar a collection localizada na pasta postman_requests, três variáveis de ambientes estão definidas: "url", "usr", "password". Os valores de testes dependem do seu ambiente.
+
 **url**: seu localhost
+
 **usr**: Administrador ou Anunciante
+
 **password**: respectivas senhas de Administrador e Anunciante
+
 
 A autenticação de cada resquest utiliza os valores de autenticação definidos na collection.
 
+Agora é só realizar as requisições!
